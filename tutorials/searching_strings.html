@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Searching Strings</title>
+    <meta name="date" content="2017-02-22 21:01" />
+    <meta name="category" content="Javascript" />
+    <meta name="tags" content="Basics" />
+    <meta name="authors" content="Chris Albon" />
+    <meta name="summary" content="Searching Strings In Javascript" />
+</head>
+
+<body>
+
+    <p id="output"></p>
+
+    <script>
+        // Create a string
+        var string = "The army will attack at dawn!";
+
+        // Return the index of `string` where locate occurs
+        var position = string.search("dawn");
+
+        // Insert the position inside the HTML element with ID="output"
+        document.getElementById("output").innerHTML = position;
+    </script>
+
+</body>
+
+</html>

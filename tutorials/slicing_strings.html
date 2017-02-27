@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Slicing Strings</title>
+    <meta name="date" content="2017-02-22 21:01" />
+    <meta name="category" content="Javascript" />
+    <meta name="tags" content="Basics" />
+    <meta name="authors" content="Chris Albon" />
+    <meta name="summary" content="Slicing Strings In Javascript" />
+</head>
+
+<body>
+
+    <p id="output"></p>
+
+    <script>
+        // Create a string
+        var string = "The army will attack at dawn!";
+
+        // Create substring that is one from the end to five from the end
+        var substring = string.slice(-5, -1);
+
+        // Insert the position inside the HTML element with ID="output"
+        document.getElementById("output").innerHTML = substring;
+    </script>
+
+</body>
+
+</html>

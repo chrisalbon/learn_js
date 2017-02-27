@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Replacing Strings</title>
+    <meta name="date" content="2017-02-22 21:01" />
+    <meta name="category" content="Javascript" />
+    <meta name="tags" content="Basics" />
+    <meta name="authors" content="Chris Albon" />
+    <meta name="summary" content="Replacing Strings In Javascript" />
+</head>
+
+<body>
+
+    <p id="output"></p>
+
+    <script>
+        // Create a string
+        var string = "The army will attack at dawn! Go army!";
+
+        // Create new string that replaces ALL (i.e. globally) instances of 'army' with 'navy'
+        var newString = string.replace(/army/g, "Navy");
+
+        // Insert the position inside the HTML element with ID="output"
+        document.getElementById("output").innerHTML = newString;
+    </script>
+
+</body>
+
+</html>

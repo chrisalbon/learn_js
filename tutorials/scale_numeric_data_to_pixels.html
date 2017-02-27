@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Scale Numeric Data To Pixels</title>
+    <meta name="date" content="2017-02-22 21:01" />
+    <meta name="category" content="Javascript" />
+    <meta name="tags" content="D3" />
+    <meta name="authors" content="Chris Albon" />
+    <meta name="summary" content="Scale Numeric Data To PixelsIn D3" />
+</head>
+
+<body>
+  <div id="chartContainer">
+    <script src="/lib/d3.v4.3.0.js"></script>
+    <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+    <script type="text/javascript">
+      var svg = dimple.newSvg("#chartContainer", 590, 400);
+      d3.tsv("/data/example_data.tsv", function (data) {
+        var myChart = new dimple.chart(svg, data);
+        myChart.setBounds(60, 30, 510, 305)
+        var x = myChart.addCategoryAxis("x", "Month");
+        x.addOrderRule("Date");
+        myChart.addMeasureAxis("y", "Unit Sales");
+        myChart.addSeries(null, dimple.plot.bar);
+        myChart.draw();
+      });
+    </script>
+  </div>
+    <!-- Load D3 Library -->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+    <!-- Use D3 Library -->
+    <script>
+        // Create a variable with the url to the data
+        var url = "https://gist.githubusercontent.com/d3byex/e5ce6526ba2208014379/raw/8fefb14cc18f0440dc00248f23cbf6aec80dcc13/walking_dead_s5.csv";
+
+        // Load csv data
+        d3.csv(url, function(error, data) {
+            // Create a function that converts USViewers to numeric
+            var convertToNumeric = data.map(function(d) {
+                return {
+                    USViewers: +d.USViewers,
+                };
+            });
+
+            // Convert viewership to numeric
+            var viewership = convertToNumeric.map(function(d) {
+                return d.USViewers;
+            });
+
+            // Find the smallest viewership
+            var minViewership = d3.min(viewership);
+
+            // Find the largest viewership
+            var maxViewership = d3.max(viewership);
+
+            // Set the minimum bar height
+            var minBarHeight = 100
+            // Set the maxiumum bar height
+            var maxBarHeight = 400;
+            // Create a variable that scales data to pixels
+            var yScale = d3.scale
+                .linear()
+                // Input min and max
+                .domain([minViewership, maxViewership])
+                // Output min and max
+                .range([minBarHeight, maxBarHeight]);
+
+            // As an example, scale a certain viewership value into pixels
+            console.log("Input in viewership: " + 15000000, "Output in pixels: " + yScale(15000000));
+        });
+    </script>
+
+</body>
+
+</html>

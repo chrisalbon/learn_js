@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Load A JSON File</title>
+    <meta name="date" content="2017-02-22 21:01" />
+    <meta name="category" content="Javascript" />
+    <meta name="tags" content="D3" />
+    <meta name="authors" content="Chris Albon" />
+    <meta name="summary" content="Load A JSON File In D3" />
+</head>
+
+<body>
+
+    <!-- Load D3 Library -->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+    <!-- Use D3 Library -->
+    <script>
+        // Create a variable with the url to the JSON file
+        var url = "https://gist.githubusercontent.com/d3byex/e5ce6526ba2208014379/raw/8fefb14cc18f0440dc00248f23cbf6aec80dcc13/walking_dead_s5.json";
+
+        // Load the json file
+        d3.json(url, function(error, data) {
+            // Output the first observation to the log
+            console.log(data[0]);
+        });
+    </script>
+
+</body>
+
+</html>

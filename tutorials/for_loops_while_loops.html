@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>For Loops And While Loops</title>
+    <meta name="date" content="2017-02-22 21:01" />
+    <meta name="category" content="Javascript" />
+    <meta name="tags" content="Basics" />
+    <meta name="authors" content="Chris Albon" />
+    <meta name="summary" content="For Loops And While Loops In Javascript" />
+</head>
+
+<body>
+
+    <script>
+
+        // Create an array of employee names
+        var employees = ["Steve Miller", "Mark Jacob", "Sam Stein", "Judith Lack", "Ado Stone", "Bob Bill"];
+
+        // Create an empty array
+        var upperCaseEmployees = [];
+
+        // Create a variable for index
+        var i;
+
+        // Start by setting i = 0
+        // If i is less than length of employees, run loop
+        // After each loop add 1 to i
+        for (i = 0; i < employees.length; i++) {
+            // Add uppercase versions of employee names
+            upperCaseEmployees[i] = employees[i].toUpperCase();
+        }
+
+        // Output to log
+        console.log("upperCaseEmployees:", upperCaseEmployees)
+
+        // Create an empty array
+        var lowerCaseEmployees = [];
+
+        // Create a variable for index
+        var j;
+
+        // For each element in the array
+        for (j in employees) {
+            // Change case and add to lowerCaseEmployees array
+            lowerCaseEmployees[j] = employees[j].toLowerCase();
+        }
+
+        // Output to log
+        console.log("lowerCaseEmployees:", lowerCaseEmployees)
+
+        // Create an empty array
+        var twoLowerCaseEmployees = [];
+
+        // Create a variable for index
+        var k = 0;
+
+        // While k is less than 2
+        while (k < 2) {
+            // Change case and add to array
+            twoLowerCaseEmployees[k] = employees[k].toLowerCase();
+            // And add 1 to k
+            k++;
+        }
+
+        // Output to log
+        console.log("twoLowerCaseEmployees:", twoLowerCaseEmployees)
+    </script>
+
+</body>
+
+</html>

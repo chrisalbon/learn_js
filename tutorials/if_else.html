@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>If... Else</title>
+    <meta name="date" content="2017-02-22 21:01" />
+    <meta name="category" content="Javascript" />
+    <meta name="tags" content="Basics" />
+    <meta name="authors" content="Chris Albon" />
+    <meta name="summary" content="If... Else In Javascript" />
+</head>
+
+<body>
+
+    <script>
+        // Create a function that takes a max and min
+        function randomInteger(min, max) {
+            // Returns the integer of a random number scaled by max and min, inclusively
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        };
+
+        // Create a random integer between 1 and 100
+        var price = randomInteger(1, 100)
+
+        // If price is less than two
+        if (price < 2) {
+            // Set output variable
+            output = "Less than 2";
+        // Else, if price is between 2 and 10
+        } else if (price > 2 && price < 10) {
+            // Set output variable
+            output = "Between 2 and 10";
+        // Else, if price is exactly 16
+        } else if (price == 16) {
+            // Set output variable
+            output = "Exactly 16";
+        // Else, if price is either 30 or 31
+        } else if (price == 30 || price == 31) {
+            // Set output variable
+            output = "30 or 31";
+        // Else, if price is less than or equal to 20
+        } else if (price <= 20) {
+            // Set output variable
+            output = "Less than or equal to 20";
+        // Else if price is not equal to 21
+        } else if (price != 21) {
+            // Set output variable
+            output = "Not equal to 21";
+        // Otherwise
+        } else {
+            // Set output variable
+            output = "Some other number";
+        }
+
+        // Output to console
+        console.log(output + ':', price)
+    </script>
+
+</body>
+
+</html>

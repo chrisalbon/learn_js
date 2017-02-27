@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dates And Times</title>
+    <meta name="date" content="2017-02-22 21:01" />
+    <meta name="category" content="Javascript" />
+    <meta name="tags" content="Basics" />
+    <meta name="authors" content="Chris Albon" />
+    <meta name="summary" content="Dates And Times In Javascript" />
+</head>
+
+<body>
+
+    <script>
+
+    // Create current date and time
+    var current = new Date();
+
+    // Output to log
+    console.log('current:', current);
+
+    // Specific date: Year, month (zero based!), day, hour, minute, second, and millisecond
+    var birthday = new Date(1983, 08, 15, 11, 33, 30, 0);
+
+    // Output to log
+    console.log('birthday:', birthday);
+
+    // Date in string format
+    var stringDate = new Date("2015-11-21");
+
+    // Output to log, printing only the year, month, day, and day of the week
+    console.log('stringDate:', stringDate.toDateString());
+
+    </script>
+
+</body>
+
+</html>

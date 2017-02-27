@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Objects</title>
+    <meta name="date" content="2017-02-22 21:01" />
+    <meta name="category" content="Javascript" />
+    <meta name="tags" content="Basics" />
+    <meta name="authors" content="Chris Albon" />
+    <meta name="summary" content="Objects in javascript" />
+</head>
+
+<body>
+
+    <script>
+        // Create an object called army
+        var army = {
+            // With key value pair with a string
+            name: '5th Army',
+            // And a nested object
+            vehicles: {
+                trucks: 4,
+                tanks: 6,
+                aircraft: 10,
+                helicpters: 12,
+            },
+        };
+
+        // View the number of trucks in the army
+        console.log('Number of trucks:', army.vehicles.trucks)
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Convert Strings To Numbers</title>
+    <meta name="date" content="2017-02-22 21:01" />
+    <meta name="category" content="Javascript" />
+    <meta name="tags" content="D3" />
+    <meta name="authors" content="Chris Albon" />
+    <meta name="summary" content="Convert Strings To Numbers In D3" />
+</head>
+
+<body>
+
+    <!-- Load D3 Library -->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+    <!-- Use D3 Library -->
+    <script>
+        // Create a variable with the url to the data
+        var url = "https://gist.githubusercontent.com/d3byex/e5ce6526ba2208014379/raw/8fefb14cc18f0440dc00248f23cbf6aec80dcc13/walking_dead_s5.csv";
+
+        // Load a CSV file
+        d3.csv(url, function(error, data) {
+            // Create a variable, map to each row/element in the data a function
+            var mappedAndConverted = data.map(function(d) {
+                // Return
+                return {
+                    // Convert episode to numeric and add
+                    Episode: +d.Episode,
+                    // Convert USViewers to numeric and add
+                    USViewers: +d.USViewers,
+                    // Add title
+                    Title: d.Title
+                };
+            });
+            // Output to console
+            console.log(mappedAndConverted);
+        });
+    </script>
+
+</body>
+
+</html>

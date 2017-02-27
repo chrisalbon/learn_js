@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basic Mathematics</title>
+    <meta name="date" content="2017-02-22 21:01" />
+    <meta name="category" content="Javascript" />
+    <meta name="tags" content="Basics" />
+    <meta name="authors" content="Chris Albon" />
+    <meta name="summary" content="Basic Mathematics In Javascript" />
+</head>
+
+<body>
+
+    <p id="output"></p>
+
+    <script>
+        // Create an array of numbers
+        var ages = [22,43,24,48,35,34,20];
+
+        // Print to log
+        console.log('ages: ', ages);
+
+        // Get the length of the ages array
+        var numberOfEmployes = ages.length;
+
+        // Print to log
+        console.log('numberOfEmployes: ', numberOfEmployes);
+
+        // Square root
+        var squareRoot = Math.sqrt(numberOfEmployes);
+
+        // Print to log
+        console.log('squareRoot: ', squareRoot);
+
+        // Absolute Value
+        var absoluteValue = Math.abs(-4.7);
+
+        // Print to log
+        console.log('absoluteValue: ', absoluteValue);
+
+        // Minimum value of an array
+        var min = Math.min.apply(null, ages);
+
+        // Print to log
+        console.log('min: ', min);
+
+        // Maximum value of an array
+        var max = Math.max.apply(null, ages);
+
+        // Print to log
+        console.log('max: ', max);
+
+        // Log
+        var log = Math.log(numberOfEmployes);
+
+        // Print to log
+        console.log('log: ', log);
+
+        // Exponent
+        var exponent = Math.exp(numberOfEmployes);
+
+        // Print to log
+        console.log('exponent: ', exponent);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+aabb<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Manipulating Arrays</title>
+    <meta name="date" content="2017-02-22 21:01" />
+    <meta name="category" content="Javascript" />
+    <meta name="tags" content="Basics" />
+    <meta name="authors" content="Chris Albon" />
+    <meta name="summary" content="Manipulating Arrays In Javascript" />
+</head>
+
+<body>
+
+    <script>
+
+    // Create some arrays
+    var names = ['Steve', 'Bob', 'Jack', 'Abe', 'Sven']
+
+    var ages = [32,12,52,69,93,23,94];
+
+    var moreAges = [32,50,29,3]
+
+    // Pop out last element in array
+    console.log('ages.pop():', ages.pop());
+
+    // Remove the first element of the array
+    console.log('ages.shift():', ages.shift());
+
+    // Push in a new element at the end of the array
+    console.log('ages.push(32):', ages.push(32));
+
+    // Push in a new element at the start of the array
+    console.log('ages.unshift(23)', ages.unshift(23));
+
+    // Deleting element of the array
+    delete ages[2];
+
+    // Concatenating two arrays
+    console.log('ages.concat(moreAges):', ages.concat(moreAges));
+
+    // Sort the array alphabetically
+    console.log('names.sort():', names.sort());
+
+    // Sort the array reverse alphabetically
+    console.log('names.reverse():', names.reverse());
+
+    // Sort ascending
+    console.log('ages.sort(function(a, b){return a - b}):', ages.sort(function(a, b){return a - b}));
+
+    // Sort decending
+    console.log('ages.sort(function(a, b){return b - a}):', ages.sort(function(a, b){return b - a}));
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Random Numbers</title>
+    <meta name="date" content="2017-02-22 21:01" />
+    <meta name="category" content="Javascript" />
+    <meta name="tags" content="Basics" />
+    <meta name="authors" content="Chris Albon" />
+    <meta name="summary" content="Random Numbers In Javascript" />
+</head>
+
+<body>
+
+    <script>
+
+        // Create a function that takes a max and min
+        function randomInteger(min, max) {
+            // Returns the integer of a random number scaled by max and min, inclusively
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        };
+
+        // Print to console
+        console.log('randomInteger:', randomInteger(0,100));
+
+        // Create a function that takes a max and min
+        function randomfloat(min, max) {
+            // Returns the float of a random number scaled by max and min, exclusively
+            return Math.random() * (max - min) + min;
+        };
+
+        // Print to console
+        console.log('randomfloat:', randomfloat(-1,1));
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Scale Numeric Data To Pixels</title>
+    <meta name="date" content="2017-02-22 21:01" />
+    <meta name="category" content="Javascript" />
+    <meta name="tags" content="D3" />
+    <meta name="authors" content="Chris Albon" />
+    <meta name="summary" content="Scale Numeric Data To PixelsIn D3" />
+</head>
+
+<body>
+
+    <div id="chart"></div>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+
+
+    <script type="text/javascript">
+        var svg = dimple.newSvg("#chart", "100%", "100%");
+        d3.csv("../data/iris.csv", function(data) {
+            var myChart = new dimple.chart(svg, data);
+            var x = myChart.addCategoryAxis("x", "species");
+            myChart.addMeasureAxis("y", "petal_width");
+            myChart.addSeries(null, dimple.plot.bar);
+            myChart.draw();
+        });
+    </script>
+
+
+</body>
+
+</html>

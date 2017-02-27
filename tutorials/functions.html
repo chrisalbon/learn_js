@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Functions</title>
+    <meta name="date" content="2017-02-22 21:01" />
+    <meta name="category" content="Javascript" />
+    <meta name="tags" content="Basics" />
+    <meta name="authors" content="Chris Albon" />
+    <meta name="summary" content="Functions In Javascript" />
+</head>
+
+<body>
+
+<p id="demo"></p>
+
+    <script>
+        // Create a function with two parameters, x and y
+        function multiply(x, y) {
+            // Return x multipled to y
+            return x * y;
+        }
+
+        // Call the function and insert the output inside the HTML element with ID="demo"
+        document.getElementById("demo").innerHTML = multiply(4, 3);
+    </script>
+
+</body>
+
+</html>
